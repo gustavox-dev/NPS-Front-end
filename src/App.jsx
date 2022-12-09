@@ -1,7 +1,9 @@
+import { Avaliation } from "./pages/Avaliation"
+
 function App() {
 
   return (
-    <h1>NPS</h1>
+    <Avaliation />
   )
 }
 
