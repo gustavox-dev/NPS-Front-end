@@ -4,4 +4,5 @@ export const fonts = {
 
     sm_weight: 300,
     md_weight: 600,
+    lg_weight: 800,
 }

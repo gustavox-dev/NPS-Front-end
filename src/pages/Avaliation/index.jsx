@@ -1,8 +1,19 @@
 import { Buttons, Container, Content, ContentAvaliation } from "./style";
-import Arrow from '../../assets/arrow.svg'
-import Close from '../../assets/close.svg'
+import Arrow from "../../assets/arrow.svg";
+import Close from "../../assets/close.svg";
 
 export function Avaliation() {
+  const handleInputChange = (e) => {
+    let target = e.target;
+    if (e.target.type !== "range") {
+      target = document.getElementById("range");
+    }
+    const min = target.min;
+    const max = target.max;
+    const val = target.value;
+    // console.log(target)
+    target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+  };
   return (
     <Container>
       <Content>
@@ -17,19 +28,30 @@ export function Avaliation() {
             Desenvolvedor para um amigo ou familiar?
           </p>
 
-          <input type="range" min="1" max="10" />
-          <ul>
-            <li><span>1</span></li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-          </ul>
+          <input
+            // value="6"
+            // value="5"
+            type="range"
+            min="1"
+            max="10"
+            id="range"
+            name="nota"
+            list="tickmarks"
+            onInput={(e) => handleInputChange(e)}
+          />
+
+          <datalist id="tickmarks">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </datalist>
 
           <textarea
             name=""
