@@ -11,7 +11,7 @@ function FirstQuestion() {
   const [questions, setQuestions] = useState("")
 
   useEffect(() => {
-    api.get("http://localhost:8080/api/question/3")
+    api.get("/api/question/3")
     .then(res => {
       setQuestions(res.data)
     })
