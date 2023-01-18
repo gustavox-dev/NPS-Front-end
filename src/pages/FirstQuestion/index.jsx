@@ -3,6 +3,7 @@ import Arrow from "../../assets/arrow.svg";
 import Close from "../../assets/close.svg";
 import { Button } from "../../components/Button";
 import InputRange from "../../components/InputRange";
+import TextArea from "../../components/TextArea"
 import { api } from "../../api/index"
 import { useEffect, useState } from "react";
 
@@ -13,10 +14,8 @@ function FirstQuestion() {
     api.get("http://localhost:8080/api/question/3")
     .then(res => {
       setQuestions(res.data)
-      console.log(res.data)
     })
   }, [])
-  console.log(questions)
 
   return (
     <Container key={questions.id}>
@@ -30,13 +29,9 @@ function FirstQuestion() {
           <p>
             {questions.description}
           </p>
-
           <InputRange />
 
-          <textarea
-            name=""
-            placeholder="Deixe sua opinião e melhorias (opcional)"
-          ></textarea>
+          <TextArea />
         </ContentAvaliation>
         <Button className="next-page">Proxima</Button>
         {/* <Button children={"Proximo"} /> */}
