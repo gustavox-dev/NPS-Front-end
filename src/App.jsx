@@ -1,9 +1,10 @@
-import { Avaliation } from "./pages/Avaliation"
+// import { Avaliation } from "./pages/Avaliation"
+import RoutesApp from "./Routes"
 
 function App() {
 
   return (
-    <Avaliation />
+    <RoutesApp />
   )
 }
 
