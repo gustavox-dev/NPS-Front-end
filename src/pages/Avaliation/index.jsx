@@ -1,8 +1,23 @@
 import { Buttons, Container, Content, ContentAvaliation } from "./style";
 import Arrow from "../../assets/arrow.svg";
 import Close from "../../assets/close.svg";
+import { Button } from "../../components/Button";
+import { api } from "../../../src/api/index"
+import { useEffect, useState } from "react";
 
 export function Avaliation() {
+  const [questions, setQuestions] = useState("")
+
+  useEffect(() => {
+    api.get("http://localhost:8080/api/question/3")
+    .then(res => {
+      setQuestions(res.data)
+      console.log(res.data)
+    })
+  }, [])
+  console.log(questions)
+
+  // console.log(api)
   const handleInputChange = (e) => {
     let target = e.target;
     if (e.target.type !== "range") {
@@ -15,17 +30,16 @@ export function Avaliation() {
     target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
   };
   return (
-    <Container>
+    <Container key={questions.id}>
       <Content>
         <Buttons>
           <img src={Arrow} alt="" />
           <img src={Close} alt="" />
         </Buttons>
         <ContentAvaliation>
-          <h1>Avaliação de satisfação</h1>
+          <h1>{questions.title}</h1>
           <p>
-            Em uma escala de 0 a 10, quanto você recomendaria o Portal do
-            Desenvolvedor para um amigo ou familiar?
+            {questions.description}
           </p>
 
           <input
@@ -59,6 +73,7 @@ export function Avaliation() {
           ></textarea>
         </ContentAvaliation>
         <button className="next-page">Proxima</button>
+        {/* <Button children={"Proximo"} /> */}
       </Content>
     </Container>
   );

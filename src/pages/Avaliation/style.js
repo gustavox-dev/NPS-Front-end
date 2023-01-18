@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   background: ${colors.bg_color_opacity};
-  font-family: ${fonts.ff_popins};
+  /* font-family: ${fonts.ff_popins}; */
 
   > p {
     font-weight: ${fonts.sm_weight};
@@ -56,19 +56,7 @@ export const Content = styled.div`
   }
 
   .next-page {
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 40px;
-    border: none;
-    width: 35%;
-    height: 9%;
-    text-align: center;
-    font-family: ${fonts.ff_popins};
-    font-weight: ${fonts.md_weight};
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    background: ${colors.bg_color};
-    color: white;
+    
   }
 `;
 
