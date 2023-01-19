@@ -5,7 +5,7 @@ import {
   TitleAvaliation,
   QuestionText,
   Buttons,
-} from "./style";
+} from "../FirstQuestion/style";
 import Arrow from "../../assets/arrow.svg";
 import Close from "../../assets/close.svg";
 import { Button } from "../../components/Button";
@@ -15,11 +15,11 @@ import { api } from "../../services/api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function FirstQuestion() {
+function SecondQuestion() {
   const [questions, setQuestions] = useState("");
 
   useEffect(() => {
-    api.get("/api/question/3").then((res) => {
+    api.get("/api/question/4").then((res) => {
       setQuestions(res.data);
     });
   }, []);
@@ -28,7 +28,10 @@ function FirstQuestion() {
     <Container key={questions.id}>
       <Content>
         <Buttons>
-          <img src={Arrow} alt="" />
+          <Link to="/firstQuestion">
+            <img className="arrow-left" src={Arrow} alt="" />
+          </Link>
+
           <img src={Close} alt="" />
         </Buttons>
         <ContentAvaliation>
@@ -38,11 +41,11 @@ function FirstQuestion() {
           <TextArea />
         </ContentAvaliation>
         <Button className="next-page">
-          <Link to="/secondQuestion">Proxima</Link>
+          <Link to="/thirdQuestion">Proxima</Link>
         </Button>
       </Content>
     </Container>
   );
 }
 
-export default FirstQuestion;
+export default SecondQuestion;

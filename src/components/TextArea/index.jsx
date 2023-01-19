@@ -1,7 +1,9 @@
+import { TextAreaStyled } from "./style";
+
 function TextArea() {
   return (
     <>
-      <textarea
+      <TextAreaStyled
         name=""
         placeholder="Deixe sua opinião e melhorias (opcional)"
       />

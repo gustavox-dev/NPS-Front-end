@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { InputStyled, DataListStyled } from "./style"
 
-function InputRange() {
+function InputRange({onClick}) {
+    const [targetValue, setTargetValue] = useState()
     const handleInputChange = (e) => {
-        let target = e.target;
-        if (e.target.type !== "range") {
+        let target = e.target;if (e.target.type !== "range") {
           target = document.getElementById("range");
         }
         const min = target.min;
@@ -11,12 +12,14 @@ function InputRange() {
         const val = target.value;
         // console.log(target)
         target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+        setTargetValue(target.value)
+        console.log(target.value)
       };
 
   return (
     <>
       <InputStyled
-        min="1"
+        min="0"
         max="10"
         id="range"
         name="nota"
@@ -25,6 +28,7 @@ function InputRange() {
       />
 
       <DataListStyled id="tickmarks">
+        <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
