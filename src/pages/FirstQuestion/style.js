@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { fonts } from "../../utils/fonts";
-import { colors } from "../../utils/colors";
 
 export const Container = styled.div`
   margin: 0;
@@ -9,6 +8,26 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   position: relative;
+`;
+
+export const Content = styled.div`
+  width: 450px;
+  background-color: white;
+  height: 65vh;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  .close-modal-success {
+    width: 85%;
+    justify-content: end;
+  }
 `;
 
 export const Buttons = styled.div`
@@ -29,36 +48,10 @@ export const Buttons = styled.div`
     height: 21px;
     width: 30px;
   }
-
   
 `;
 
-export const Content = styled.div`
-  width: 450px;
-  background-color: white;
-  height: 65vh;
 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: center;
-
-  > h1 {
-  }
-
-  .next-page {
-  }
-  .close-modal-success {
-    width: 85%;
-    /* border: 1px solid red; */
-    justify-content: end;
-  }
-`;
 
 export const ContentAvaliation = styled.div`
   padding-top: 40px;
@@ -72,7 +65,6 @@ export const ContentAvaliation = styled.div`
 `;
 
 export const TitleAvaliation = styled.h1`
-  /* margin-top: 120px; */
   font-weight: ${fonts.md_weight};
   font-size: 26px;
   font-family: ${fonts.ff_popins}, ${fonts.ff_serif};
@@ -86,7 +78,5 @@ export const QuestionText = styled.p`
 `;
 
 export const IconSuccess = styled.div`
-  /* border: 1px solid black; */
-  /* height: 100px; */
   width: 100%;
 `;

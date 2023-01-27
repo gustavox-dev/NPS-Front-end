@@ -1,3 +1,4 @@
+import React from 'react';
 import { TextAreaStyled } from "./style";
 
 function TextArea() {

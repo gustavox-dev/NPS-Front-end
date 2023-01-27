@@ -28,7 +28,7 @@ function SecondQuestion() {
     <Container key={questions.id}>
       <Content>
         <Buttons>
-          <Link to="/firstQuestion">
+          <Link to="/">
             <img className="arrow-left" src={Arrow} alt="" />
           </Link>
 

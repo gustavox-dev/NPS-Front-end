@@ -9,7 +9,7 @@ const RoutesApp = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route element={<FirstQuestion/>} path="/firstQuestion" />
+                <Route element={<FirstQuestion/>} path="/" />
                 <Route element={<SecondQuestion/>} path="/secondQuestion" />
                 <Route element={<ThirdQuestion/>} path="/thirdQuestion" />
                 <Route element={<Success />} path="/success" />
