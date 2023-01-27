@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/TextArea/style.js</title>
+    <title>Code coverage report for components/Button/styles.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/TextArea</a> style.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Button</a> styles.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -78,7 +78,13 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -97,17 +103,20 @@
 import { fonts } from "../../utils/fonts";
 import { colors } from "../../utils/colors";
 &nbsp;
-export const TextAreaStyled = styled.textarea`
-    margin-top: 30px;
+export const Btn = styled.button`
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 40px;
     border: none;
-    border-radius: 5px;
-    background-color: ${colors.bg_textarea};
+    width: 35%;
+    height: 9%;
+    text-align: center;
     font-family: ${fonts.ff_popins};
-    padding: 15px;
-    width: 85%;
-    height: 20%;
-    margin-left: 5%;
-    outline: none;
+    font-weight: ${fonts.md_weight};
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    background: ${colors.bg_color};
+    color: white;
 `;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

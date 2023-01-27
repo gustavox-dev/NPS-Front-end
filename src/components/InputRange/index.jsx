@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { InputStyled, DataListStyled } from "./style"
 
@@ -18,7 +19,6 @@ function InputRange({onClick}) {
         const val = target.value;
         target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
         setTargetValue(target.value)
-        console.log(target.value)
       };
 
   return (
@@ -26,6 +26,7 @@ function InputRange({onClick}) {
       <InputStyled
         min="0"
         max="10"
+        testId="range"
         id="range"
         name="nota"
         list="tickmarks"
