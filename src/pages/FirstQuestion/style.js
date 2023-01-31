@@ -44,9 +44,17 @@ export const Buttons = styled.div`
     width: 30px;
   }
 
-  .arrow-left {
+  .arrow {
     height: 21px;
     width: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 85%;
+    justify-content: flex-end;
+    .arrow {
+      display: none;
+    }
   }
   
 `;

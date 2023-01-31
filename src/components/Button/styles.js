@@ -16,4 +16,38 @@ export const Btn = styled.button`
     letter-spacing: 0.5px;
     background: ${colors.bg_color};
     color: white;
+
+    .previus-page {
+        display: none ;
+    }
+
+    .next-page-btn {
+        
+    }
+    @media (max-width: 768px) {
+        background: #FFFFFF;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        .previus-page {
+            border-radius: 3px;
+            background: ${colors.bg_color};
+            width: 35%;
+            height: 100%;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .next-page-btn {
+            border-radius: 3px;
+            background: ${colors.bg_color};
+            width: 35%;
+            height: 100%;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 `;

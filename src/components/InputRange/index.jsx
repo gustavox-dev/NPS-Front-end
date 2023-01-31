@@ -2,31 +2,30 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { InputStyled, DataListStyled } from "./style"
 
-function InputRange({onClick}) {
-    const [targetValue, setTargetValue] = useState()
+function InputRange({ onClick, userNote, setUserNote }) {
+  // const [targetValue, setTargetValue] = useState()
 
-    useEffect(() => {
-      handleInputChange;
-    }, []);
+  useEffect(() => {
+    handleInputChange;
+  }, []);
 
-    const handleInputChange = (e) => {
-        let target = e.target;
-        if (e.target.type !== "range") {
-          target = document.getElementById("range");
-        }
-        const min = target.min;
-        const max = target.max;
-        const val = target.value;
-        target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
-        setTargetValue(target.value)
-      };
-
+  const handleInputChange = (e) => {
+    let target = e.target;
+    if (e.target.type !== "range") {
+      target = document.getElementById("range");
+    }
+    const min = target.min;
+    const max = target.max;
+    const val = target.value;
+    target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+    setUserNote(target.value)
+  };
+  console.log(userNote)
   return (
     <>
       <InputStyled
         min="0"
         max="10"
-        testId="range"
         id="range"
         name="nota"
         list="tickmarks"

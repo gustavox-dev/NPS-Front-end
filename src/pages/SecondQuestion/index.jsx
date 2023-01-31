@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Container,
   Content,
@@ -17,6 +18,8 @@ import { Link } from "react-router-dom";
 
 function SecondQuestion() {
   const [questions, setQuestions] = useState("");
+  const [userNote, setUserNote] = useState("");
+  const [userOpinion, setUserOpinion] = useState("");
 
   useEffect(() => {
     api.get("/api/question/4").then((res) => {
@@ -24,24 +27,34 @@ function SecondQuestion() {
     });
   }, []);
 
+  const post = () => {
+    const config = {
+      userNote: userNote,
+      userOpinion: userOpinion,
+      question: questions.id
+    }
+    
+    api.post("/api/answer", config)
+  };
+
   return (
     <Container key={questions.id}>
       <Content>
         <Buttons>
           <Link to="/">
-            <img className="arrow-left" src={Arrow} alt="" />
+            <img className="arrow" src={Arrow} alt="" />
           </Link>
-
           <img src={Close} alt="" />
         </Buttons>
         <ContentAvaliation>
           <TitleAvaliation>{questions.title}</TitleAvaliation>
           <QuestionText>{questions.description}</QuestionText>
-          <InputRange />
-          <TextArea />
+          <InputRange userNote={userNote} setUserNote={setUserNote} />
+          <TextArea userOpinion={userOpinion} setUserOpinion={setUserOpinion} />
         </ContentAvaliation>
         <Button className="next-page">
-          <Link to="/thirdQuestion">Proxima</Link>
+          <Link className="previus-page" to="/">Voltar</Link>
+          <Link className="next-page-btn" to="/thirdQuestion" onClick={post}>Proxima</Link>
         </Button>
       </Content>
     </Container>

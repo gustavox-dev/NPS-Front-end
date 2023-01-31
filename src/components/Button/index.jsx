@@ -1,8 +1,8 @@
 import React from 'react'
 import { Btn } from './styles'
 
-export function Button({ children }) {
+export function Button({ onClick, children }) {
     return(
-        <Btn>{children}</Btn>
+        <Btn onClick={onClick}>{children}</Btn>
     )
 }
