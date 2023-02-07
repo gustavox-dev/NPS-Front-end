@@ -15,6 +15,8 @@ function TextArea({ userOpinion, setUserOpinion }) {
         placeholder="Deixe sua opinião e melhorias (opcional)"
         onChange={e => handleChange(e)}
       />
+      
+
     </>
   );
 }

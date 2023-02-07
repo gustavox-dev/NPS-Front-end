@@ -36,22 +36,7 @@ describe("InputRange test ", () => {
         userEvent.type(inputR, 5)
         
         
-        // const dataList = document.getElementById("tickmarks");
-        // inputR.addEventListener("onInput", e => handleInputChange(e))
-
-        // const handleInputChange = (e) => {
-        //     let target = e.target;
-        //     // if (e.target.type !== "range") {
-        //     //     target = document.getElementById("range");
-        //     // }
-        //     const min = target.min;
-        //     const max = target.max;
-        //     const val = target.value;
-        //     target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
-        // };
-        
         expect(inputR).toBeInTheDocument();
-        // expect(inputR).toBe(handleInputChange(5));
 
     })
 

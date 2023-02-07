@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675120448081" clover="3.2.0">
-  <project timestamp="1675120448081" name="All files">
-    <metrics statements="218" coveredstatements="206" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="3" elements="229" coveredelements="213" complexity="0" loc="218" ncloc="218" packages="4" files="8" classes="8"/>
+<coverage generated="1675279088950" clover="3.2.0">
+  <project timestamp="1675279088951" name="All files">
+    <metrics statements="230" coveredstatements="218" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="3" elements="241" coveredelements="225" complexity="0" loc="230" ncloc="230" packages="4" files="8" classes="8"/>
     <package name="components.Button">
-      <metrics statements="61" coveredstatements="61" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="72" coveredstatements="72" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\Button\index.jsx">
-        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="12" coveredstatements="12" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -14,9 +14,13 @@
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
       </file>
       <file name="styles.js" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\Button\styles.js">
-        <metrics statements="53" coveredstatements="53" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="60" coveredstatements="60" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -70,12 +74,19 @@
         <line num="51" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.InputRange">
-      <metrics statements="106" coveredstatements="97" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
+      <metrics statements="105" coveredstatements="96" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\InputRange\index.jsx">
-        <metrics statements="52" coveredstatements="43" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
+        <metrics statements="51" coveredstatements="42" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -125,9 +136,8 @@
         <line num="47" count="3" type="stmt"/>
         <line num="48" count="3" type="stmt"/>
         <line num="49" count="3" type="stmt"/>
-        <line num="50" count="3" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
       </file>
       <file name="style.js" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\InputRange\style.js">
         <metrics statements="54" coveredstatements="54" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -188,9 +198,9 @@
       </file>
     </package>
     <package name="components.TextArea">
-      <metrics statements="38" coveredstatements="35" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <metrics statements="40" coveredstatements="37" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
       <file name="index.jsx" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\TextArea\index.jsx">
-        <metrics statements="22" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
+        <metrics statements="24" coveredstatements="21" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -213,6 +223,8 @@
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
       <file name="style.js" path="C:\Users\Gustavo\Desktop\Exmplo-NPS\NPS-Frontend\src\components\TextArea\style.js">
         <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

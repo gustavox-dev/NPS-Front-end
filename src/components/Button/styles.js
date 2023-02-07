@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { fonts } from "../../utils/fonts";
 import { colors } from "../../utils/colors";
 
@@ -23,6 +23,13 @@ export const Btn = styled.button`
 
     .next-page-btn {
         
+    }
+
+    
+    
+    &[disabled] {
+        opacity: 0.4;
+        cursor: not-allowed;
     }
     @media (max-width: 768px) {
         background: #FFFFFF;

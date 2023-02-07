@@ -24,6 +24,8 @@ function SecondQuestion() {
   useEffect(() => {
     api.get("/api/question/4").then((res) => {
       setQuestions(res.data);
+    }).catch(error => {
+      alert("Questão não encontrada no banco de dados", error.message);
     });
   }, []);
 
@@ -56,6 +58,7 @@ function SecondQuestion() {
           <Link className="previus-page" to="/">Voltar</Link>
           <Link className="next-page-btn" to="/thirdQuestion" onClick={post}>Proxima</Link>
         </Button>
+        
       </Content>
     </Container>
   );

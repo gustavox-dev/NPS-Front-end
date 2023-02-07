@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { fonts } from "../../utils/fonts";
+import { Link } from "react-router-dom";
+import { colors } from "../../utils/colors";
 
 export const Container = styled.div`
   margin: 0;
@@ -88,3 +90,29 @@ export const QuestionText = styled.p`
 export const IconSuccess = styled.div`
   width: 100%;
 `;
+
+export const TextRequired = styled.span`
+  font-family: ${fonts.ff_popins}, ${fonts.ff_serif};
+  color: red;
+  margin-left: 20px;
+  width: 90%;
+  display: flex;
+  justify-items: flex-start;
+  font-size: 13px;
+`;
+
+export const LinkStyled = styled(Link)`
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[disabled] {
+    ${({ disabled }) => disabled ?  css`opacity: 0.4;
+        cursor: not-allowed` : ""};
+  }
+`;
+

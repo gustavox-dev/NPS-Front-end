@@ -20,7 +20,6 @@ function InputRange({ onClick, userNote, setUserNote }) {
     target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
     setUserNote(target.value)
   };
-  console.log(userNote)
   return (
     <>
       <InputStyled

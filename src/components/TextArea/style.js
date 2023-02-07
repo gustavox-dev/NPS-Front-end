@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { fonts } from "../../utils/fonts";
 import { colors } from "../../utils/colors";
+import styled from "styled-components";
 
 export const TextAreaStyled = styled.textarea`
     margin-top: 30px;

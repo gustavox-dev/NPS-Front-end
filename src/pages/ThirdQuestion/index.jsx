@@ -13,16 +13,22 @@ import InputRange from "../../components/InputRange";
 import TextArea from "../../components/TextArea";
 import { api } from "../../services/api";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function ThirdQuestion() {
+  const navigate = useNavigate();
+  const { id } = useParams();
   const [questions, setQuestions] = useState("");
   const [userNote, setUserNote] = useState("");
   const [userOpinion, setUserOpinion] = useState("");
 
+  
+
   useEffect(() => {
     api.get("/api/question/5").then((res) => {
       setQuestions(res.data);
+    }).catch(error => {
+      alert("Questão não encontrada no banco de dados", error.message);
     });
   }, []);
 
@@ -35,6 +41,8 @@ function ThirdQuestion() {
     
     api.post("/api/answer", config)
   };
+
+  
 
   return (
     <Container key={questions.id}>

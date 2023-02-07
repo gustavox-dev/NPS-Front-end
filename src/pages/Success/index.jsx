@@ -10,7 +10,23 @@ import {
 import success from "../../assets/success.svg";
 import { Button } from "../../components/Button";
 import Close from "../../assets/close.svg";
+import { useEffect } from "react";
+import { api } from "../../services/api";
+import { useState } from "react";
+
+
 function Success() {
+  const [successResponse, setSuccessResponse] = useState("")
+
+  useEffect(() => {
+    api.get("/api/answer").then(response => {
+        setSuccessResponse(response.data);
+      }).catch(error => {
+        alert("Erro ao buscar a lista de resposta no banco de dados", error.message);
+      });
+  }, [])
+
+  
   return (
     <Container>
       <Content>
@@ -31,6 +47,7 @@ function Success() {
         </ContentAvaliation>
         <Button className="next-page">Concluir</Button>
       </Content>
+      {console.table(successResponse)}
     </Container>
   );
 }
