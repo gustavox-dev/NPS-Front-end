@@ -19,13 +19,18 @@ function Success() {
   const [successResponse, setSuccessResponse] = useState("")
 
   useEffect(() => {
-    api.get("/api/answer").then(response => {
-        setSuccessResponse(response.data);
-      }).catch(error => {
-        alert("Erro ao buscar a lista de resposta no banco de dados", error.message);
-      });
+    requestAnswers();
   }, [])
 
+  function requestAnswers() {
+    api.get("/api/answer").then(response => {
+      setSuccessResponse(response.data);
+    }).catch(error => {
+      alert("Erro ao buscar a lista de resposta no banco de dados", error.message);
+    });
+  }
+
+  
   
   return (
     <Container>
@@ -45,9 +50,9 @@ function Success() {
             pela sua participação
           </QuestionText>
         </ContentAvaliation>
-        <Button className="next-page">Concluir</Button>
+        <Button className="next-page" onClick={() => console.table(successResponse)}>Concluir</Button>
       </Content>
-      {console.table(successResponse)}
+      
     </Container>
   );
 }

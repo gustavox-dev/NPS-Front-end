@@ -22,19 +22,26 @@ function SecondQuestion() {
   const [userOpinion, setUserOpinion] = useState("");
 
   useEffect(() => {
+    requestPage()
+  }, []);
+
+
+  function requestPage() {
     api.get("/api/question/4").then((res) => {
       setQuestions(res.data);
     }).catch(error => {
       alert("Questão não encontrada no banco de dados", error.message);
     });
-  }, []);
+  }
+
+  const config = {
+    userNote: userNote,
+    userOpinion: userOpinion,
+    question: questions.id
+  }
 
   const post = () => {
-    const config = {
-      userNote: userNote,
-      userOpinion: userOpinion,
-      question: questions.id
-    }
+    
     
     api.post("/api/answer", config)
   };
