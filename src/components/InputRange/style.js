@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../utils/colors";
+import { fonts } from "../../utils/fonts";
 
 export const InputStyled = styled.input.attrs({ type: "range" })`
   margin-left: 5%;
@@ -51,4 +52,5 @@ export const DataListStyled = styled.datalist`
   width: 90%;
   display: flex;
   justify-content: space-between;
+  font-family: ${fonts.ff_popins}, ${fonts.ff_serif};
 `;
